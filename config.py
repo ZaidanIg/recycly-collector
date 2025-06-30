@@ -15,6 +15,7 @@ class Config:
     MQTT_PASSWORD = os.environ.get('MQTT_PASSWORD', '')
     MQTT_TRIGGER_TOPIC = 'waste/trigger'
     MQTT_RESULT_TOPIC = 'waste/accepted'
+    MQTT_REJECTED_TOPIC = 'waste/rejected'
     MQTT_QR_TOPIC = "waste/qr"
     MQTT_SESSION_TOPIC = "waste/session"
     MQTT_STOP_SESSION_TOPIC = "waste/stop_session"
