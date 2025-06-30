@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32-CAM Stream Monitoring</title>
+</head>
+<body style="background:#111;color:#eee; font-family: sans-serif; text-align: center;">
+    <h2>ESP32-CAM Stream (Object Detection)</h2>
+    <img src="{{ url_for('main.video_feed') }}" width="480" alt="ESP32-CAM video stream">
+    <p>Status botol (accepted/rejected) akan dikirim via MQTT dan diproses oleh backend.</p>
+</body>
+</html>
