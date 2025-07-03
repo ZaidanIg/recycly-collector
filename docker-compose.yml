@@ -1,0 +1,18 @@
+version: '3.8'
+
+sercives:
+  recycly-collcetor:
+    build: .
+    container_name: recycly_collector_app
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./.env:/app/.env
+      - ./recycly-collector-firebase-adminsdk-fbsvc-332e282217.json:/app/recycly-collector-firebase-adminsdk-fbsvc-332e282217.json
+    networks:
+      - recycly-net
+
+networks:
+  recycly-net:
+    driver: bridge
