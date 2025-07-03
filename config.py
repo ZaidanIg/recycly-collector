@@ -7,7 +7,7 @@ load_dotenv()
 class Config:
     SAVE_FOLDER = "waste-collection"
 
-    FIREBASE_CREDENTIALS_PATH = os.environ.get('FIREBASE_CREDENTIALS_PATH', 'recycly-collector-firebase-adminsdk-fbsvc-40b4a103a0.json')
+    FIREBASE_CREDENTIALS_PATH = os.environ.get('FIREBASE_CREDENTIALS_PATH', 'recycly-collector-firebase-adminsdk-fbsvc-332e282217.json')
 
     MQTT_BROKER_URL = os.environ.get('MQTT_BROKER_URL', 'broker.emqx.io')
     MQTT_BROKER_PORT = int(os.environ.get('MQTT_BROKER_PORT', 1883))
@@ -25,4 +25,4 @@ class Config:
     DETECTION_CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow",
                          "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"]
     
-    ESP32_STREAM_URL = os.environ.get('ESP32_STREAM_URL', 'http://172.20.10.2:81/stream')
+    ESP32_STREAM_URL = os.environ.get('ESP32_STREAM_URL')
