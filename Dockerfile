@@ -11,9 +11,9 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-reco
 
 COPY . .
 
-ENV FLASK_APP=wsgi.py
+ENV FLASK_APP=run.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 EXPOSE 5001
 
-CMD ["gunicorn", "--workers", "4", "--bind", "0.0.0:5001", "wsgi:app"]
+CMD ["gunicorn", "--workers", "4", "--bind", "0.0.0:5001", "run:app"]
