@@ -1,15 +1,18 @@
 version: '3.8'
 
-sercives:
-  recycly-collcetor:
+services:
+  recycly-collector:
     build: .
+    image: ghcr.io/zaidanig/recycly-collector:latest
     container_name: recycly_collector_app
     restart: unless-stopped
     ports:
       - "5001:5001"
+    env_file:
+      - .env
     volumes:
-      - ./.env:/app/.env
-      - ./recycly-collector-firebase-adminsdk-fbsvc-332e282217.json:/app/recycly-collector-firebase-adminsdk-fbsvc-332e282217.json
+      - /home/zaidan/secrets/recycly-collector-firebase-key.json:/app/recycly-collector-firebase-adminsdk-fbsvc-9d44181f1b.json:ro
+      - ./waste-collection:/app/waste-collection
     networks:
       - recycly-net
 
