@@ -1,6 +1,7 @@
 Flask
 gunicorn
 python-dotenv
+gevent
 firebase-admin
 paho-mqtt
 opencv-python-headless
