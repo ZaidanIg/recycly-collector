@@ -15,7 +15,6 @@ from .services.detection_service import detection_service
 
 bp = Blueprint('main', __name__)
 
-# ... (fungsi handle_error, index, start_scan, scan_state, stop_scan tetap sama) ...
 def handle_error(e, context="API"):
     print(f"ERROR in {context}: {e}\n{traceback.format_exc()}")
     return jsonify({"error": "An internal server error occurred."}), 500
@@ -99,7 +98,6 @@ def generate_qr():
         return jsonify(qr_payload)
     except Exception as e: return handle_error(e, "generate_qr")
 
-# ... (fungsi gen_frames dan /stream tetap sama) ...
 def gen_frames():
     while True:
         try:
