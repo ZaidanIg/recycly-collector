@@ -16,4 +16,4 @@ ENV FLASK_RUN_HOST=0.0.0.0
 
 EXPOSE 5001
 
-CMD ["gunicorn", "--workers", "4", "--bind", "0.0.0:5001", "run:app"]
+CMD ["gunicorn", "--workers", "1", "--worker-class", "gevent", "--bind", "0.0.0:5001", "run:app"]
