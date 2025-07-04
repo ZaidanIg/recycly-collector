@@ -2,3 +2,16 @@ Lib
 .env
 recycly-collector-firebase-adminsdk-fbsvc-332e282217.json
 waste-collection
+
+*.json
+
+/venv/
+/Scripts/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.idea/
+.vscode/
